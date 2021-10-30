@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="#{login.index}"></title>
+</head>
+<body>
+<!--method="post"-->
+<h1 th:text="#{login.index}" ></h1>
+<form th:action="@{/login}" >
+    <h1 th:text="${msg}" style="color: brown"></h1>
+    <input type="text" name="a" th:placeholder="#{login.username}" required="required" autofocus="autofocus" ><br>
+    <input type="password" name="b" th:placeholder="#{login.password}" required="required" autofocus="autofocus" ><br>
+    <button type="submit"  th:text="#{login.btn}"></button>
+    <a th:href="@{/index.html(l='zh_CN')}">中文</a><br>
+    <a th:href="@{/index.html(l='en_US')}">English</a>
+</form>
+</body>
+</html>

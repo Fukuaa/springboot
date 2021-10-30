@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>add</title>
+</head>
+<body>
+<div th:insert="~{t::top}"></div>
+<form th:action="@{/addemp}" method="post">
+    <div>
+        <label>id</label>
+        <input type="text" name="id">
+    </div>
+    <div>
+        <label>name</label>
+        <input type="text"  name="name">
+    </div>
+    <div>
+        <label>gender</label>
+        男<input type="radio"  name="gender" value="1">
+        女<input type="radio"  name="gender" value="0">
+    </div>
+    <div>
+        <label>department</label>
+        <select name="department.id">
+            <option th:each="dept:${department}" th:text="${dept.getDename()}" th:value="${dept.getId()}"></option>
+        </select>
+        <!--<input type="text"  name="department">-->
+    </div>
+    <button type="submit">添加</button>
+</form>
+</body>
+</html>
