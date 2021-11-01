@@ -4,6 +4,7 @@ import org.thymeleaf.util.StringUtils;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Locale;
+//SpringMVC国际化
 public class myr implements LocaleResolver {
     public Locale resolveLocale(HttpServletRequest request){
         String l = request.getParameter("l");
